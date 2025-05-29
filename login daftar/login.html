@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MengTumbas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-950 min-h-screen flex items-center justify-center text-neutral-100 font-sans">
+    <a href="../homepage/home.html" class="absolute left-6 top-6 text-neutral-400 hover:text-red-500 text-3xl font-bold transition"
+        title="Kembali ke Home">&times;</a>
+    <div class="w-full max-w-md mx-auto bg-neutral-900 rounded-2xl shadow-lg border border-neutral-800 p-8">
+        <!-- Banner Gambar Atas -->
+        <div class="flex justify-center mb-6">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                alt="Banner Login" class="w-32 h-32 object-cover rounded-full shadow-lg border-4 border-green-400">
+        </div>
+        <div class="text-2xl font-bold text-center text-green-400 mb-8 tracking-wide">Login ke MengTumbas</div>
+        <form>
+            <div class="mb-5">
+                <label class="block mb-2 text-sm text-neutral-300" for="email">Email</label>
+                <input id="email" type="email" required
+                    class="w-full px-4 py-2 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-green-500 outline-none text-neutral-100 placeholder:text-neutral-400 transition"
+                    placeholder="Masukkan email">
+            </div>
+            <div class="mb-6">
+                <label class="block mb-2 text-sm text-neutral-300" for="password">Password</label>
+                <div class="relative">
+                    <input id="password" type="password" required
+                        class="w-full px-4 py-2 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-green-500 outline-none text-neutral-100 placeholder:text-neutral-400 transition pr-10"
+                        placeholder="Masukkan password">
+                    <button type="button" id="togglePassword" tabindex="-1"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-green-400 focus:outline-none">
+                        <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.956 9.956 0 012.293-3.95m3.362-2.568A9.956 9.956 0 0112 5c4.477 0 8.268 2.943 9.542 7a9.965 9.965 0 01-4.293 5.032M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit"
+                class="w-full py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold transition mb-4">
+                Login
+            </button>
+            <div class="text-center text-sm text-neutral-400">
+                Belum punya akun?
+                <a href="daftar.html" class="text-green-400 hover:underline">Daftar</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Toggle password visibility
+        const passwordInput = document.getElementById('password');
+        const togglePassword = document.getElementById('togglePassword');
+        const eyeOpen = document.getElementById('eyeOpen');
+        const eyeClosed = document.getElementById('eyeClosed');
+
+        togglePassword.addEventListener('click', function () {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            eyeOpen.classList.toggle('hidden', !isPassword);
+            eyeClosed.classList.toggle('hidden', isPassword);
+        });
+    </script>
+</body>
+
+</html>

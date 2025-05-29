@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MengTumbas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- WindUI CDN -->
+    <script src="https://unpkg.com/windui@latest/dist/windui.min.js"></script>
+</head>
+
+<body class="bg-neutral-950 min-h-screen text-neutral-100 font-sans">
+
+    <!-- Header -->
+    <header class="w-full px-6 py-4 bg-neutral-900 flex items-center justify-between border-b border-neutral-800">
+        <div class="flex items-center gap-3">
+            <!-- Tempat Logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo"
+                class="w-10 h-10 rounded-full bg-white object-contain" id="logo-website">
+            <span class="text-xl font-bold tracking-wide text-white">MengTumbas</span>
+        </div>
+        <nav class="flex gap-6 text-sm">
+            <a href="#" class="hover:text-green-400 transition">Home</a>
+            <a href="#" class="hover:text-green-400 transition">Kategori</a>
+            <a href="#" class="hover:text-green-400 transition">Promo</a>
+            <a href="../keranjang/keranjang.html" class="hover:text-green-400 transition">Keranjang</a>
+            <a href="../login daftar/login.html" class="hover:text-green-400 transition">Akun</a>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="w-full flex justify-center mt-6">
+        <div class="relative w-full max-w-md">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400">
+                <!-- Heroicons solid search icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+                    <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </span>
+            <input type="text"
+                class="w-full pl-11 pr-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 focus:ring-2 focus:ring-green-500 outline-none text-neutral-100 placeholder:text-neutral-400 transition"
+                placeholder="Cari produk, kategori, atau brand...">
+        </div>
+    </div>
+
+    <!-- Banner Promo Slider -->
+    <section class="max-w-4xl mx-auto mt-10 px-4">
+        <div class="overflow-x-auto flex gap-4 rounded-2xl scrollbar-hide scroll-smooth">
+            <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2025/5/23/7ef7c78e-80a3-4df3-897b-81c5ba937706.jpg"
+                alt="Promo 1" class="w-full max-w-3xl h-56 object-cover rounded-2xl flex-shrink-0">
+            <img src="assets/promo2.jpg" alt="Promo 2"
+                class="w-full max-w-3xl h-56 object-cover rounded-2xl flex-shrink-0">
+            <img src="assets/promo3.jpg" alt="Promo 3"
+                class="w-full max-w-3xl h-56 object-cover rounded-2xl flex-shrink-0">
+            <!-- Tambahkan gambar promo lain jika perlu -->
+        </div>
+    </section>
+
+    <!-- Kategori Produk -->
+    <section class="max-w-4xl mx-auto mt-10 px-4">
+        <h2 class="text-green-400 text-lg font-semibold mb-4 text-center">Kategori Populer</h2>
+        <div class="overflow-x-auto flex gap-6 scrollbar-hide scroll-smooth px-2">
+            <div class="flex flex-col items-center min-w-[90px]">
+                <button
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 hover:bg-green-500 hover:text-white transition text-2xl mb-2">
+                    📱
+                </button>
+                <span class="text-sm text-neutral-300">Elektronik</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[90px]">
+                <button
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 hover:bg-green-500 hover:text-white transition text-2xl mb-2">
+                    👗
+                </button>
+                <span class="text-sm text-neutral-300">Fashion</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[90px]">
+                <button
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 hover:bg-green-500 hover:text-white transition text-2xl mb-2">
+                    💊
+                </button>
+                <span class="text-sm text-neutral-300">Kesehatan</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[90px]">
+                <button
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 hover:bg-green-500 hover:text-white transition text-2xl mb-2">
+                    🏠
+                </button>
+                <span class="text-sm text-neutral-300">Rumah Tangga</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[90px]">
+                <button
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 hover:bg-green-500 hover:text-white transition text-2xl mb-2">
+                    🏃‍♂️
+                </button>
+                <span class="text-sm text-neutral-300">Olahraga</span>
+            </div>
+            <!-- Tambahkan kategori lain jika perlu -->
+        </div>
+    </section>
+
+    <!-- Produk Pilihan -->
+    <section class="max-w-4xl mx-auto mt-12 px-4">
+        <h2 class="text-green-400 text-lg font-semibold mb-4">Produk Pilihan</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- 6 Barang Asing -->
+            <a href="../barang asing/barangasing-1.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://images.tokopedia.net/img/cache/200/hDjmkQ/2023/6/26/43d4c76d-6452-4bde-9c1f-76068daa3cbc.jpg.webp?ect=4g"
+                    alt="Smartwatch Internasional"
+                    class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Zeblaze Jam Tangan Pintar Di Luar 2 Gps Tampilan Amoled 1.78</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp2.412.100</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: China</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 10-20 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    3.5 <span class="text-neutral-400 ml-1">| 15 terjual</span>
+                </div>
+            </a>
+            <a href="../barang asing/barangasing-2.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbk2-lq3k7w4k6w4e2e"
+                    alt="Earphone Bluetooth" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Earphone Bluetooth</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp299.000</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: Korea</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 8-15 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.8 <span class="text-neutral-400 ml-1">| 500+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang asing/barangasing-3.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbk2-lq3k7w4k6w4e2f" alt="Tas Import"
+                    class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Tas Import</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp499.000</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: Jepang</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 12-18 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.8 <span class="text-neutral-400 ml-1">| 500+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang asing/barangasing-4.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbk2-lq3k7w4k6w4e2g"
+                    alt="Kamera Digital" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Kamera Digital</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp2.999.000</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: USA</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 14-21 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.8 <span class="text-neutral-400 ml-1">| 500+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang asing/barangasing-5.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbk2-lq3k7w4k6w4e2h"
+                    alt="Sneakers Import" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Sneakers Import</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp1.099.000</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: Vietnam</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 10-17 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.8 <span class="text-neutral-400 ml-1">| 500+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang asing/barangasing-6.html"
+                class="relative bg-neutral-900 rounded-xl border-2 border-blue-500 p-4 flex flex-col items-center hover:border-blue-400 transition">
+                <span class="px-2 py-1 bg-blue-600 text-xs rounded text-white absolute top-2 left-2">Barang Asing</span>
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbk2-lq3k7w4k6w4e2i"
+                    alt="Jam Tangan Digital" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Jam Tangan Digital</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp399.000</div>
+                <div class="text-neutral-400 text-xs mb-1">Dikirim dari: Singapura</div>
+                <div class="text-neutral-400 text-xs mb-1">Estimasi tiba 7-14 hari</div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Internasional
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.8 <span class="text-neutral-400 ml-1">| 500+ terjual</span>
+                </div>
+            </a>
+            <!-- 6 Barang Lokal -->
+            <a href="../barang lokal/baranglokal-1.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_max_natural_titanium_1_1_2.jpg"
+                    alt="Iphone 15 Pro Max" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Iphone 15 Pro Max</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp24.999.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp26.000.000</span>
+                    <span class="text-red-400 ml-1">4%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Surabaya
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    5.0 <span class="text-neutral-400 ml-1">| 250+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang lokal/baranglokal-2.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/8/21/2b18f97c-3da4-4280-a5d4-25f7d260111e.png.webp?ect=4g"
+                    alt="Sepatu Olahraga" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">910 Nineten Takashi Run 1.5 Sepatu Lari
+                </div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp649.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp679.000</span>
+                    <span class="text-red-400 ml-1">4%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Surabaya
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    5.0 <span class="text-neutral-400 ml-1">| 250+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang lokal/baranglokal-3.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWEFBXhwY_AoLlWg4yHpmCA0YG99d-KPsDQ&s"
+                    alt="Blender Dapur" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Blender Dapur</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp589.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp700.000</span>
+                    <span class="text-red-400 ml-1">16%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Bandung
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.9 <span class="text-neutral-400 ml-1">| 300+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang lokal/baranglokal-4.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/10/2e1e7e7c-9c7a-4a9a-9e5b-9e7e7e7e7e7e.jpg"
+                    alt="Tas Ransel Pria" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Tas Ransel Pria</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp159.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp200.000</span>
+                    <span class="text-red-400 ml-1">21%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Yogyakarta
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.7 <span class="text-neutral-400 ml-1">| 80+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang lokal/baranglokal-5.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/7/15/1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p.jpg"
+                    alt="Jam Tangan Wanita" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Jam Tangan Wanita</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp299.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp350.000</span>
+                    <span class="text-red-400 ml-1">15%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Medan
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.6 <span class="text-neutral-400 ml-1">| 120+ terjual</span>
+                </div>
+            </a>
+            <a href="../barang lokal/baranglokal-6.html"
+                class="bg-neutral-900 rounded-xl border border-neutral-800 p-4 flex flex-col items-center hover:border-green-400 transition">
+                <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2023/1/5/abcdef12-3456-7890-abcd-ef1234567890.jpg"
+                    alt="Kipas Angin Meja" class="w-[160px] h-[160px] object-contain mb-3 rounded-lg bg-neutral-800">
+                <div class="font-semibold text-center mb-1 text-neutral-100">Kipas Angin Meja</div>
+                <div class="text-green-400 font-bold text-lg mb-1">Rp89.000</div>
+                <div class="text-neutral-400 text-sm mb-1">
+                    <span class="line-through">Rp120.000</span>
+                    <span class="text-red-400 ml-1">26%</span>
+                </div>
+                <div class="flex items-center gap-1 text-sm text-purple-400 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243A8 8 0 1112 20a7.963 7.963 0 01-4.243-1.243z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Kota Semarang
+                </div>
+                <div class="flex items-center gap-1 text-yellow-400 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    4.5 <span class="text-neutral-400 ml-1">| 60+ terjual</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <style>
+        /* Sembunyikan scrollbar horizontal */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+</body>
+
+</html>

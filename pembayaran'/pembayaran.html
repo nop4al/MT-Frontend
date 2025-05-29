@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - MengTumbas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-950 min-h-screen text-neutral-100 font-sans">
+    <!-- Header -->
+    <header class="w-full px-6 py-4 bg-neutral-900 flex items-center justify-between border-b border-neutral-800">
+        <div class="text-xl font-bold tracking-wide text-white">MengTumbas</div>
+        <nav class="flex gap-6 text-sm">
+            <a href="../homepage/home.html" class="hover:text-green-400 transition">Home</a>
+            <a href="#" class="hover:text-green-400 transition">Kategori</a>
+            <a href="#" class="hover:text-green-400 transition">Promo</a>
+            <a href="../keranjang.html" class="hover:text-green-400 transition">Keranjang</a>
+            <a href="../login.html" class="hover:text-green-400 transition">Akun</a>
+        </nav>
+    </header>
+
+    <!-- Pembayaran Section -->
+    <section class="max-w-3xl mx-auto mt-10 px-4">
+        <h2 class="text-green-400 text-lg font-semibold mb-6 text-center">Pembayaran</h2>
+        <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col gap-6">
+            <!-- Alamat Pengiriman -->
+            <div>
+                <div class="font-semibold mb-2 text-neutral-200">Alamat Pengiriman</div>
+                <div class="bg-neutral-800 rounded-lg p-4 flex flex-col gap-1">
+                    <span class="font-semibold">Budi Santoso</span>
+                    <span class="text-neutral-300 text-sm">Jl. Mawar No. 123, Surabaya, Jawa Timur</span>
+                    <span class="text-neutral-400 text-xs">0812-3456-7890</span>
+                </div>
+            </div>
+            <!-- Ringkasan Belanja -->
+            <div>
+                <div class="font-semibold mb-2 text-neutral-200">Ringkasan Belanja</div>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <img src="https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_max_natural_titanium_1_1_2.jpg"
+                            alt="Iphone 15 Pro Max"
+                            class="w-16 h-16 object-contain rounded-lg bg-neutral-800 border border-neutral-700">
+                        <div class="flex-1">
+                            <div class="font-semibold text-neutral-100">Iphone 15 Pro Max</div>
+                            <div class="text-neutral-400 text-xs">Varian: 256GB</div>
+                            <div class="text-green-400 font-bold">Rp24.999.000</div>
+                        </div>
+                        <div class="text-neutral-400 text-sm">x1</div>
+                    </div>
+                    <!-- Tambah produk lain jika perlu -->
+                </div>
+            </div>
+            <!-- Metode Pembayaran -->
+            <div>
+                <div class="font-semibold mb-2 text-neutral-200">Metode Pembayaran</div>
+                <div class="flex flex-col gap-2">
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="metode" class="accent-green-500" checked>
+                        <span>Transfer Bank (Virtual Account)</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="metode" class="accent-green-500">
+                        <span>QRIS</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="metode" class="accent-green-500">
+                        <span>GoPay</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="metode" class="accent-green-500">
+                        <span>OVO</span>
+                    </label>
+                </div>
+            </div>
+            <!-- Ringkasan Pembayaran -->
+            <div class="border-t border-neutral-800 pt-4 flex flex-col gap-2">
+                <div class="flex justify-between">
+                    <span class="text-neutral-300">Total Harga</span>
+                    <span class="text-neutral-100">Rp24.999.000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-neutral-300">Ongkir</span>
+                    <span class="text-neutral-100">Rp20.000</span>
+                </div>
+                <div class="flex justify-between font-bold text-green-400 text-lg mt-2">
+                    <span>Total Bayar</span>
+                    <span>Rp25.019.000</span>
+                </div>
+            </div>
+            <button
+                class="w-full py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold transition text-lg mt-2">
+                Bayar Sekarang
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>
